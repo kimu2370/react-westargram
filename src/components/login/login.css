@@ -1,0 +1,71 @@
+.container {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  min-height: 100%;
+}
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 378px;
+  border: 2px solid #f1f1f1; 
+}
+
+.logo {
+  margin-top: 30px;
+  margin-bottom: 25px;
+  height: 51px;
+  width: 175px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 260px;
+}
+
+.form > * {
+  border-radius: 3px;
+  border: 0;
+  outline: 0;
+}
+
+.form input {
+  margin: 2.5px 40px;
+  height: 38px;
+  background-color: #f8f9f9;
+}
+
+.form .login-button-active {
+  cursor: pointer;
+  padding: 7px;
+  margin: 10px 40px;
+  color: #f1f1f1;
+  font-weight: 600;
+  background-color: #3897f0;
+}
+
+.form .login-button {
+  padding: 7px;
+  margin: 10px 40px;
+  color: #f1f1f1;
+  font-weight: 600;
+  background-color: rgba(56,151,240,.3);
+  /* 아이디와 패슽워드 사이즈를 충족하면 변경 background-color: #3897f0; */
+  /* + 로그인 클릭 기능도 생기게 한다. */
+}
+a {
+  text-decoration: none; 
+  outline: none;
+}
+.search-password-button {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 17px;
+}

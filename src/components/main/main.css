@@ -1,0 +1,300 @@
+.main {
+   box-sizing: border-box;
+   position: relative;
+}
+
+nav {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 1;
+   border-bottom: 2px solid #f1f1f1;
+   background-color: #ffffff;
+}
+
+nav .logo {
+   display: flex;
+   justify-content: flex-start;
+   width: 360px;
+}
+
+nav .logo .logo-img {
+   width: 30px;
+}
+
+nav .logo .logo-bar {
+   padding-left: 1px;
+   padding-right: 1px;
+   background-color: black;
+   margin: 0 16px;
+}
+
+nav .logo .logo-text {
+   width: 90px;
+}
+
+nav .search input {
+   width: 200px;
+   border: 0px;
+   border-radius: 3px;
+   outline: 0;
+   border: 1px solid #dbdbdb;
+   line-height: 23px;
+}
+
+nav .menu {
+   display: flex;
+   justify-content: flex-end;
+   width: 360px;
+}
+
+nav .menu > * {
+   width: 30px;
+   margin-left: 30px;
+}
+
+main {
+   margin: 0 auto;
+   display: flex;
+   flex-flow: row nowrap;
+   flex-grow: 1;
+   max-width: 935px;
+   margin-bottom: 100px;
+}
+
+main .feeds {
+   border: 1px solid #dbdbdb;
+}
+
+main .feeds,article,header,.feed-icons,.feed-state,.feed-comment {
+   display: flex;
+}
+
+main .feeds {
+   margin-top: 84px;
+   top: 60px;
+   max-width: 614px;
+   margin-right: 28px;
+}
+
+main .feeds article {
+   flex-direction: column;
+}
+
+main .feeds article header {
+   padding: 8px 12px 8px 12px;
+   justify-content: space-between;
+   
+}
+
+main .feeds article header div {
+   display: flex;
+}
+
+main .feeds article header div .user {
+   display: flex;
+   flex-direction: column;
+}
+
+/* user */
+
+main .feeds article header .userimage {
+   width: 40px;
+   border-radius: 50%;
+}
+
+.user {
+   margin-left: 10px;
+   font-size: 13px;
+}
+
+.username {
+   font-weight: 600;
+}
+
+.usersub {
+   opacity: 0.6;
+}
+
+/*  ------------- */
+
+main .feeds article header .threedots {        
+   width: 28px;
+}
+
+main .feeds article section .feed-image {
+   width: 614px;
+}
+
+main .feeds article section .feed-icons {
+   justify-content: space-between;
+   padding: 8px;
+}
+
+main .feeds article section .feed-icons .heart,.comment,.share,.bookmark {
+   width: 26px;
+}
+
+main .feeds article section .feed-icons .three {
+   display: flex;
+   width: 18%;
+   justify-content: space-between;
+}
+
+main .feeds article section .feed-state {
+   display: flex;
+   flex-direction: column;
+   margin-left: 6.5px;
+}
+
+.feed-like {
+   font-size: 14px;
+   font-weight: 600;
+}
+
+.post div span:nth-child(1):hover {
+   color: tomato;
+}
+
+.post div span:nth-child(1) {
+   cursor: pointer;
+}
+
+.post div span:nth-child(2) {
+   padding-left: 8px;
+   /* color: red; */
+}
+
+
+main .feeds article section .feed-comment {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 10px;
+   border-top: 1px solid #dbdbdb;
+   align-items: center;
+   padding: 10px 0 10px 6.5px;
+}
+
+main .feeds article section .feed-comment .comment-input {
+   width: 90%;
+}
+
+main .feeds article section .feed-comment .comment-Button {
+   width: 10%;
+}
+
+main .fixed {
+   position: fixed;
+   width: 100%;
+   margin-left: 650px;
+}
+
+main .main-right {
+   display: flex;
+   flex-direction: column;
+   margin-top: 84px;
+   max-width: 293px;
+   top: 60px;
+}
+
+.stories, .recommends {
+   border: 1px solid #dbdbdb;
+}
+
+main .main-right .account {
+   display: flex;
+   align-items: center;
+   margin-bottom: 12px;
+}
+
+main .main-right .account .userimage {
+   border-radius: 50%;
+   width: 60px;
+}
+
+main .main-right .stories {
+   display: flex;
+   flex-direction: column;
+   padding: 15px 0 15px 15px;
+   height: 182px;
+   margin-bottom: 12px;
+}
+
+main .main-right .header {
+   display: flex;
+   justify-content: space-between;
+   padding-right: 10px;
+}
+
+main .main-right .stories .main {
+   display: flex;
+   flex-direction: column;
+   overflow: hidden auto;
+}
+
+main .main-right .stories .header {
+   margin-bottom: 10px;
+}
+
+main .main-right .stories .header .title {
+   opacity: 0.5;
+   font-size: 15px;
+}
+
+main .main-right .stories .header .total {
+   font-size: 13px;
+}
+
+main .main-right .recommends {
+   display: flex;
+   flex-direction: column;
+   padding: 15px 0 15px 15px;
+   margin-bottom: 12px;
+}
+
+main .main-right .main section .userimage {
+   border-radius: 50%;
+   width: 48px;
+}
+
+main .main-right .recommends .header .title {
+   opacity: 0.5;
+   font-size: 15px;
+}
+
+main .main-right .recommends .header .total {
+   font-size: 13px;
+}
+
+main .main-right .main section {
+   display: flex;
+   align-items: center;
+   padding: 10px 0 10px 0;
+}
+
+main .main-right .recommends {
+   display: flex;
+   flex-direction: column;
+   padding: 15px 0 15px 15px;
+}
+
+main .main-right .recommends .main {
+   max-height: 180px;
+   overflow: hidden;
+}
+
+main .main-right .recommends .main section .userimage {
+   border-radius: 50%;
+   width: 38px;
+}
+
+main .main-right .main section a {
+   margin-left: auto;
+   margin-right: 12px;
+   justify-content: space-around;
+   text-decoration: none; 
+   outline: none;
+}
