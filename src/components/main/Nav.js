@@ -4,10 +4,12 @@ class Nav extends React.Component {
    render() {
       return (
          <nav>
-            <div className="logo">
-               <img className="logo-img" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/logo.png" alt=""/>
-               <div className="logo-bar"></div>
-               <img className="logo-text" src="/img/logo_text.png" alt=""/>
+            <div>
+               <div  className="logo">
+                  <img className="logo-img" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/logo.png" alt=""/>
+                  <div className="logo-bar"></div>
+                  <img className="logo-text" src="/img/logo_text.png" alt=""/>
+               </div>
             </div>
             <div className="search">
                <input type="text" placeholder="검색"/>

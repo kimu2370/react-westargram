@@ -10,6 +10,7 @@ nav {
    position: fixed;
    top: 0;
    width: 100%;
+   height: 75px;
    z-index: 1;
    border-bottom: 2px solid #f1f1f1;
    background-color: #ffffff;
@@ -18,7 +19,8 @@ nav {
 nav .logo {
    display: flex;
    justify-content: flex-start;
-   width: 360px;
+   width: 380px;
+   height: 25px;
 }
 
 nav .logo .logo-img {
@@ -29,11 +31,12 @@ nav .logo .logo-bar {
    padding-left: 1px;
    padding-right: 1px;
    background-color: black;
-   margin: 0 16px;
+   margin-left: 20px;
+   margin-right: 20px;
 }
 
 nav .logo .logo-text {
-   width: 90px;
+   width: 110px;
 }
 
 nav .search input {
@@ -52,7 +55,7 @@ nav .menu {
 }
 
 nav .menu > * {
-   width: 30px;
+   width: 25px;
    margin-left: 30px;
 }
 

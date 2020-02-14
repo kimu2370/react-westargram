@@ -1,16 +1,44 @@
-import React from 'react';
-
-class Feeds extends React.Component {
+import React, {Component} from 'react';
+import Comment from './Comment';
+// import uuid from 'uuid';
+class Feeds extends Component {
    constructor(props) {
       super(props)
       this.state = {
-         isEntered : "Enter"
+         data : [],
+         comment: ''
       };
    }
-   handleKeyDown = e => {
-      console.log(e);
+
+
+   handleChange = e => {
+      this.setState({
+         [e.target.name] : e.target.value
+      });
    }
-   render() {
+
+   handleKeyDown = e => {
+      (e.key==="Enter"&&this.state.comment.length>0) && this.handleCreate()
+   }
+
+   handleCreate = () => {
+      const newComment = {
+         comment: this.state.comment
+      }
+      this.state.comment.length>0 &&
+      this.setState({
+         data: [...this.state.data, newComment],
+         comment : ''
+      });
+   }
+
+   handleRemove = (i) => {
+      this.setState({
+         data : this.state.data.filter((item,index) => index !== i)
+      });
+   }
+
+   render() { 
       return (
          <div className="feeds">
             <article>
@@ -42,15 +70,18 @@ class Feeds extends React.Component {
                <section>
                   <div className="feed-state">
                      <div className="feed-like">좋아요 21,000개</div>
-                        <div className="post">
-                           {/* <!-- <div><span>k_seungHyun</span><span>하이</span></div> --> */}
-                        </div>
+                        <Comment data={this.state.data} onRemove={this.handleRemove}/>
                   </div>
                </section>
                <section>
                   <div className="feed-comment">
-                     <input className="comment-input" type="text" placeholder="댓글 달기..."onKeyDown={this.handleKeyDown}/>
-                     <button className="comment-Button">게시</button>
+                     <input className="comment-input" type="text" 
+                              placeholder="댓글 달기..."
+                              onChange={this.handleChange} 
+                              onKeyDown={this.handleKeyDown} 
+                              name="comment" 
+                              value={this.state.comment}/>
+                     <button className="comment-Button" onClick={this.handleCreate}>게시</button>
                   </div>
                </section>
             </article>
