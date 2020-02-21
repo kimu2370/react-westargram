@@ -5,6 +5,7 @@ import MainRight from '../components/main/MainRight';
 import '../components/main/main.css';
 
 class Main extends Component {
+
    render() {
       return (
          <div>

@@ -6,7 +6,7 @@ class Feeds extends Component {
       super(props)
       this.state = {
          data : [],
-         comment: ''
+         comment: '',
       };
    }
 
@@ -22,10 +22,11 @@ class Feeds extends Component {
    }
 
    handleCreate = () => {
+      
       const newComment = {
          comment: this.state.comment
       }
-      this.state.comment.length>0 &&
+      // this.state.comment.length>0 &&
       this.setState({
          data: [...this.state.data, newComment],
          comment : ''
@@ -80,7 +81,8 @@ class Feeds extends Component {
                               onChange={this.handleChange} 
                               onKeyDown={this.handleKeyDown} 
                               name="comment" 
-                              value={this.state.comment}/>
+                              value={this.state.comment}
+                     />
                      <button className="comment-Button" onClick={this.handleCreate}>게시</button>
                   </div>
                </section>

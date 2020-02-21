@@ -1,6 +1,38 @@
-import React from 'react';
+import React,{Component} from 'react';
 
-class Nav extends React.Component {
+class Nav extends Component {
+
+   constructor(props) {
+      super(props)
+      this.state = {
+         title : ""
+      }
+   }
+   handleSearch = () => {
+      fetch("http://10.58.2.13:8000/search/search_best",{
+          method:'POST',
+          body :JSON.stringify(
+         {
+               "title" : this.state.title
+         }
+      )})
+      .then(res=>{
+         return res.json();
+      })
+      .then(res=>{
+         localStorage.setItem('title',res.title);
+      });
+   }
+   handleChange = e => {
+      this.setState({
+         [e.target.name] : e.target.value
+      });
+   }
+
+   handleKeyDown = e => {
+      (e.key==="Enter"&&this.state.title.length>0) && this.handleSearch()
+   }
+
    render() {
       return (
          <nav>
@@ -12,7 +44,7 @@ class Nav extends React.Component {
                </div>
             </div>
             <div className="search">
-               <input type="text" placeholder="검색"/>
+               <input type="text" placeholder="검색" name="title" value={this.state.title} onChange={this.handleChange} onKeyDown={this.handleKeyDown}/>
             </div>
             <div className="menu">
                <img className="menu-search" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt=""/>

@@ -1,0 +1,19 @@
+{
+   "data" : [
+      {
+         "id" : 1,
+         "name" : "kim",
+         "age" : 29
+      },
+      {
+         "id" : 2,
+         "name" : "lee",
+         "age" : 27
+      },
+      {
+         "id" : 3,
+         "name" : "hwang",
+         "age" : 28
+      }
+   ]
+}

@@ -1,6 +1,7 @@
 .container {
   box-sizing: border-box;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 10%;
@@ -68,4 +69,17 @@ a {
   font-size: 13px;
   font-weight: 600;
   margin-bottom: 17px;
+}
+.test{
+  display: flex;
+  border: 1px solid tomato;
+  margin: 20px;
+  padding: 30px;
+}
+
+.test div {
+  margin-left: 10px;
+}
+.test div span {
+  color: #3897f0;
 }
